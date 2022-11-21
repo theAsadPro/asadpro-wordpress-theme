@@ -19,7 +19,12 @@
 
     get_template_part( 'template-parts/page-parts/services' );
     get_template_part( 'template-parts/page-parts/about' );
-    get_template_part( 'template-parts/page-parts/experience-facts' );
+
+    //display this section on or off
+    if ( get_theme_mod( 'expertience_facts_display_section' ) == true ) {
+        get_template_part( 'template-parts/page-parts/experience-facts' );
+    }
+
     get_template_part( 'template-parts/page-parts/testimonial' );
     get_template_part( 'template-parts/page-parts/technology' );
     get_template_part( 'template-parts/page-parts/portfolio' );

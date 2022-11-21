@@ -105,20 +105,6 @@ $wp_customizer->add_control( 'whatIdo_section_desc_control', array(
     'type'     => 'textarea',
 ) );
 
-/**
- * =======================================
- *         Navigation Color ->START<-
- * =======================================
- */
-
 // ============================*****=================================
 // ============================ END ================================
 // ============================*****=================================
-/***
-function headerCtaDisplay() {
-if ( get_theme_mod( 'asadPro_home_headerCtaDisplay' ) == true ) {
-return true;
-}
-return false;
-}
- **/

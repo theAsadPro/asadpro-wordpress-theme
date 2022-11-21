@@ -2,14 +2,36 @@
     <div class="some-facts-overlay">
         <div class="container">
         <div class="text-end editSection"></div>
-            <div class="section-header text-center pb-md-5">
-                <h4 class="subtitle"><span>Why me </span></h4>
+            <div class="section-header text-center">
+                <div class="mini-title">
+                    <?php if ( get_theme_mod( 'expertience_facts_mini_title_display' ) == false ): echo "";else: ?>
+                        <h4 class="subtitle"><span><?php echo get_theme_mod( 'expertience_facts_section_mini_title', 'Why Me' ) ?></span></h4>
+                    <?php endif;?>
+                </div>
                 <h1 class="section-title">
-                    Some <span class="highlight">facts of me</span> to choose
+                <?php echo get_theme_mod( 'expertience_facts_section_headding', 'Some <span class="highlight">facts of me</span> to choose' ) ?>
                 </h1>
             </div>
+            <div class="section-description text-center">
+                <?php if ( get_theme_mod( 'expertience_facts_section_desc_display' ) == false ): echo "";else: ?>
+<?php
+$default = <<<EOD
+                        Working with shopify, wordpress are the most experienced side of
+                        me and if you want more smarter solution that is API based
+                        headless cms development.
+                        <br />
+                        <br />
+                        You can turn your existion shopify or wordpress website into
+                        react app or headless app with latest technologies. they will be
+                        most beautiful, cross device friendly and super fast. Also I can
+                        work for data visialization with MS Power BI and can also build
+                        wix websites.
+                EOD;?>
+<?php echo apply_filters( 'the_content', get_theme_mod( 'expertience_facts_section_desc', $default ) ); ?>
+<?php endif;?>
+            </div>
             <div class="row">
-                <div class="col-lg-4 pb-md-5">
+                <div class="col-lg-4 p-md-5">
                     <div class="some-facts d-flex" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="50"
                         data-aos-easing="ease-in-out" data-aos-once="true">
                         <div class="flex-shrink-0 align-self-center">
@@ -26,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 pb-md-5">
+                <div class="col-lg-4 p-md-5">
                     <div class="some-facts d-flex" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"
                         data-aos-easing="ease-in-out" data-aos-once="true">
                         <div class="flex-shrink-0 align-self-center">
@@ -44,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 p-md-5">
                     <div class="some-facts d-flex" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="50"
                         data-aos-easing="ease-in-out" data-aos-once="true">
                         <div class="flex-shrink-0 align-self-center">
