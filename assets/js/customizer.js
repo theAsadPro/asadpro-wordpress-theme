@@ -104,6 +104,58 @@ wp.customize("whatIdo_section_mini_title", function (value) {
       $("#what-we-do .section-description").html(newVal);
     });
   });
+
+  /**
+  * ===========================================
+  *   Display Experience / Some facts Section
+  * ===========================================
+  */
+wp.customize("expertience_facts_display_section", function (value) {
+  value.bind(function (newVal) {
+    if (newVal == false) {
+      $("#some-facts").css('display', 'none');        
+    } else {
+      $("#some-facts").css('display', 'block');
+    }
+  });
+});
+  
+wp.customize("expertience_facts_mini_title_display", function (value) {
+  value.bind(function (newVal) {
+    var setting = wp.customize('expertience_facts_section_mini_title');
+    if (newVal == true) {        
+      $("#some-facts .mini-title").html('<h4 class="subtitle"><span>' + setting.get() + '</span></h4>');
+      $("#some-facts .mini-title").css('display', 'block');
+    } else {      
+      $("#some-facts .mini-title").css('display', 'none');
+      }
+    });
+});
+  
+  wp.customize("expertience_facts_section_desc_display", function (value) {
+  value.bind(function (newVal) {
+    var setting = wp.customize('expertience_facts_section_desc');
+    if (newVal == true) {        
+      $("#some-facts .section-description").html(setting.get());
+      $("#some-facts .section-description").css('display', 'block');
+    } else {      
+      $("#some-facts .section-description").css('display', 'none');
+      }
+    });
+});
+  
+wp.customize("expertience_facts_section_headding", function (value) {
+  value.bind(function (newVal) {
+    $("#some-facts .section-title").html(newVal);
+  });
+});
+
+wp.customize("expertience_facts_section_desc", function (value) {
+  value.bind(function (newVal) {
+    $("#some-facts .section-description").html(newVal);
+  });
+});
+
   
 /**
 * =======================================

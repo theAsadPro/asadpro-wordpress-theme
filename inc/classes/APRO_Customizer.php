@@ -54,7 +54,7 @@ class APRO_Customizer {
          * @header-option-customizer
          * @package ASADPRO
          */
-        require_once ASADPRO_CUSTOMIZER . 'homepage-option.php';
+        require_once ASADPRO_CUSTOMIZER . 'whatido-option.php';
 
         /**
          * @service-cat-option-customizer
