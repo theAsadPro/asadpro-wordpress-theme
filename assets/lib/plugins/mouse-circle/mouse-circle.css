@@ -1,0 +1,43 @@
+#mouse-follow {
+    z-index: 999;
+    position: absolute;
+    display: block;
+    left: -200px;
+    top: -300px;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    pointer-events: none;
+  }
+  #mouse-follow .mouse-circle-fill {
+    height: 10px;
+    width: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: 0px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-animation: rotate-circle-bip 10s linear infinite;
+    animation: rotate-circle-bip 10s linear infinite;
+  }
+  #mouse-follow .mouse-circle-outline {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #ef1d4f;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: -15px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .start-move .mouse-circle-fill {
+    height: 7px !important;
+    width: 7px !important;
+  }
+  .start-move .mouse-circle-outline {
+    height: 20px !important;
+    width: 20px !important;
+  }

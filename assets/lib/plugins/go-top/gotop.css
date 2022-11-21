@@ -1,0 +1,38 @@
+#go-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ef1d4f;
+    color: #ffffff;
+    position: fixed;
+    right: 100px;
+    z-index: 999;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  .go-up {
+    bottom: 100px;
+  }
+  @media screen and (max-width: 992px) {
+    .go-up {
+      right: 30px !important;
+      bottom: 40px !important;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .go-up {
+      right: 20px !important;
+      bottom: 40px !important;
+    }
+  }
+  
+  .go-down {
+    bottom: -100px;
+    display: none;
+  }
