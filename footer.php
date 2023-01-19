@@ -12,8 +12,9 @@
 ?>
 
 <footer>
+    <?php if ( !is_page( 'contact' ) ): ?>
     <section id="contact-cta">
-        <div class="contact-cta-overlay">
+        <div class="contact-cta-overlay pb-5">
             <div class="container">
                 <div class="contact-cta-contents">
                     <div class="section-header text-center">
@@ -25,8 +26,9 @@
             </div>
         </div>
     </section>
-    <section id="footer">
-        <div class="footer-overlay">
+   <?php endif;?>
+    <section id="footer" class="overflow-hidden">
+        <div class="footer-overlay                                   <?php if ( !is_page( 'contact' ) ): ?> pt-5<?php endif;?> " >
             <div class="container py-md-5">
                 <div class="row">
                     <div class="col-lg-6 col-md-4 col-sm-12">

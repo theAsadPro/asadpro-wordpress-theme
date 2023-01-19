@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html           <?php language_attributes();?>>
+<html                                    <?php language_attributes();?>>
 
 <head>
     <meta charset="<?php bloginfo( 'charset' );?>">
@@ -21,7 +21,7 @@
     <?php wp_head();?>
 </head>
 
-<body           <?php body_class();?>>
+<body                                    <?php body_class();?>>
     <?php wp_body_open();?>
 
     <?php if ( get_option( 'asadpro_mouse_follow' ) == 'on' ): ?>
@@ -31,7 +31,7 @@
     </div>
     <?php endif;?>
 
-    <header            <?php if ( !is_home() || !is_front_page() ): ?> style="min-height: auto;"<?php endif;?>>
+    <header                                                                   <?php if ( !is_home() || !is_front_page() ): ?> style="min-height: auto;"<?php endif;?>>
         <section id="navigation-logo">
             <div class="container">
                 <div class="row">
@@ -118,17 +118,3 @@
 
         endif;?>
     </header>
-    <?php
-        if ( !is_home() || !is_front_page() ):
-    ?>
-    <section id="breadcrumb">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><?php wp_title( '' );?></li>
-                </ol>
-            </nav>
-        </div>
-    </section>
-    <?php endif;?>

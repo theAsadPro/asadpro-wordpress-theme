@@ -28,6 +28,7 @@ body {
   position: relative;
   font-size: 16px;
   overflow-x: hidden;
+  background-color: #f4f4f4;
 }
 @media screen and (max-width: 992px) {
   body {
@@ -348,7 +349,8 @@ body {
 
 #breadcrumb {
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
+  /* background: #f2f2f2; */
 }
 #breadcrumb ol.breadcrumb {
   padding: 0;
@@ -591,6 +593,26 @@ header {
 #homepage .typed-cursor {
   color: #ef1d4f;
   font-weight: 800;
+}
+#primary-content{
+  max-width: 800px;
+  background: #fff;
+  color: #494949;
+  border: 1px solid #E7E7E7;
+  border-radius: 5px;
+  padding: 40px 24px;
+  margin-bottom: 100px;
+  line-height: 1.88rem;
+}
+
+.widget-area{
+  background: #fff;
+  color: #494949;
+  border: 1px solid #E7E7E7;
+  padding: 40px 24px;
+}
+#primary-content .entry-title{
+  margin-top: 0;
 }
 
 .what-we-do-overlay {
@@ -1406,9 +1428,9 @@ footer {
     padding-bottom: 60px;
   }
 }
-#footer .footer-overlay {
+/* #footer .footer-overlay {
   padding-top: 150px;
-}
+} */
 @media screen and (max-width: 767px) {
   #footer .col {
     -webkit-box-flex: 100%;
