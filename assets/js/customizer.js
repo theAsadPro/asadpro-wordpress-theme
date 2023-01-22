@@ -131,6 +131,12 @@ wp.customize("expertience_facts_mini_title_display", function (value) {
       }
     });
 });
+
+wp.customize("expertience_facts_section_mini_title", function (value) {
+  value.bind(function (newVal) {
+    $("#some-facts .subtitle span").text(newVal);
+  });
+});
   
   wp.customize("expertience_facts_section_desc_display", function (value) {
   value.bind(function (newVal) {
@@ -153,6 +159,63 @@ wp.customize("expertience_facts_section_headding", function (value) {
 wp.customize("expertience_facts_section_desc", function (value) {
   value.bind(function (newVal) {
     $("#some-facts .section-description").html(newVal);
+  });
+});
+
+//experience facts numbers
+wp.customize("expertience_facts_item1", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-1 .some-facts-texts div.h1").html(newVal);
+  });
+});
+
+wp.customize("expertience_facts_item2", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-2 .some-facts-texts div.h1").html(newVal);
+  });
+});
+
+wp.customize("expertience_facts_item3", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-3 .some-facts-texts div.h1").html(newVal);
+  });
+});
+
+//experience facts title
+wp.customize("expertience_facts_item1_title", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-1 .some-facts-texts div.h6").html(newVal);
+  });
+});
+
+wp.customize("expertience_facts_item2_title", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-2 .some-facts-texts div.h6").html(newVal);
+  });
+});
+
+wp.customize("expertience_facts_item3_title", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-3 .some-facts-texts div.h6").html(newVal);
+  });
+});
+  
+//experience facts descriptions
+wp.customize("expertience_facts_item1_desc", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-1 .some-facts-texts p").html(newVal);
+  });
+});
+
+wp.customize("expertience_facts_item2_desc", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-2 .some-facts-texts p").html(newVal);
+  });
+});
+
+wp.customize("expertience_facts_item3_desc", function (value) {
+  value.bind(function (newVal) {
+    $("#fact-item-3 .some-facts-texts p").html(newVal);
   });
 });
 
@@ -294,10 +357,61 @@ wp.customize("expertience_facts_section_desc", function (value) {
 
   /**
   * =======================================
-  * What I do section
+  * Testimonial section
   * =======================================
   */
   
+wp.customize("testimonial_display_section", function (value) {
+    value.bind(function (newVal) {
+      // var setting = wp.customize('expertience_facts_section_desc');
+      if (newVal == true) {      
+        // $("#some-facts .section-description").html(setting.get());
+        $("#testimonial").css('display', 'block');
+      } else {      
+        $("#testimonial").css('display', 'none');
+        }
+  });
+});  
+  
+  wp.customize("testimonial_cta_text", function (value) {
+    value.bind(function (newVal) {
+      $("#testimonial #testimonial-cta").text(newVal);
+    });
+  });
+
+  wp.customize("testimonial_cta_url", function (value) {
+    value.bind(function (newVal) {
+      $("#homepage #testimonial-cta").attr("href", newVal);
+    });
+  });
+
+  /**
+  * =======================================
+  *       Service Category Section
+  * =======================================
+  */
+  
+wp.customize("serice_cat_display_section", function (value) {
+    value.bind(function (newVal) {
+      if (newVal == true) {      
+        $("#services").css('display', 'block');
+      } else {      
+        $("#services").css('display', 'none');
+        }
+  });
+});  
+  
+  wp.customize("testimonial_cta_text", function (value) {
+    value.bind(function (newVal) {
+      $("#testimonial #testimonial-cta").text(newVal);
+    });
+  });
+
+  wp.customize("testimonial_cta_url", function (value) {
+    value.bind(function (newVal) {
+      $("#homepage #testimonial-cta").attr("href", newVal);
+    });
+  });
 
 
 

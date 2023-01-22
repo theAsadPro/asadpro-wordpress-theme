@@ -34,3 +34,29 @@ $wp_customizer->selective_refresh->add_partial( 'testimonial_selective_refresh',
         return "";
     },
 ) );
+
+// button
+$wp_customizer->add_setting( 'testimonial_cta_text', array(
+    'default'   => __( 'More reviews', 'asadPro' ),
+    'transport' => 'postMessage',
+) );
+
+$wp_customizer->add_control( 'testimonial_cta_text_control', array(
+    'label'    => 'CTA Button Text',
+    'section'  => 'testimonial_section',
+    'settings' => 'testimonial_cta_text',
+    'type'     => 'text',
+) );
+
+// button url
+$wp_customizer->add_setting( 'testimonial_cta_url', array(
+    'default'   => __( 'http://asadpro.com/testimonials', 'asadPro' ),
+    'transport' => 'postMessage',
+) );
+
+$wp_customizer->add_control( 'testimonial_cta_url_control', array(
+    'label'    => 'URL',
+    'section'  => 'testimonial_section',
+    'settings' => 'testimonial_cta_url',
+    'type'     => 'url',
+) );

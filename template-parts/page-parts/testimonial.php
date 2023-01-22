@@ -20,58 +20,58 @@
                                     $qry->the_post();
                                 ?>
 
-			                            <!-- Slider Item Start -->
-			                            <div class="swiper-slide">
-			                                <div class="testimonial-slider-item">
-			                                    <div class="testimonial-slider-inside">
-			                                        <div class="testimonial-slider-title">
-			                                            <h3><?php the_title();?></h3>
-			                                            <div class="rating">
-			                                                <?php
-                                                                    $str = '<i class="icon-star-full"></i> ';
-                                                                    $meta = get_post_meta( $post->ID, 'rating', true );
-                                                                    echo str_repeat( $str, $meta );
-                                                                ?>
-			                                            </div>
-			                                        </div>
-			                                        <div class="row justify-content-md-center">
-			                                            <div class="col col-lg-8">
-			                                                <div class="testimonial-slider-client">
-			                                                    <?php the_post_thumbnail( 'thumbnail' );?>
-			                                                </div>
-			                                                <div class="testimonial-slider-content">
-			                                                    <?php the_content();?>
-			                                                    <h4>
-			                                                        <?php
-                                                                            $meta = get_post_meta( $post->ID, 'client', true );
-                                                                            echo $meta;
-                                                                        ?>
-			                                                    </h4>
-			                                                </div>
-			                                            </div>
-			                                            <div class="col-md-auto">
-			                                                <div class="testimonial-slider-footer">
-			                                                    <div class="location">
-			                                                        <i class="icon-home_pin"></i>
-			                                                        <?php
-                                                                            $meta = get_post_meta( $post->ID, 'country', true );
-                                                                            echo $meta;
-                                                                        ?>
-			                                                    </div>
-			                                                    <div class="project_age">
-			                                                        <?php
-                                                                            $meta = get_post_meta( $post->ID, 'date_year', true );
-                                                                            echo $meta;
-                                                                        ?>
-			                                                    </div>
-			                                                </div>
-			                                            </div>
-			                                        </div>
-			                                    </div>
-			                                </div>
-			                            </div>
-			                            <!-- Slider Item End -->
-			                            <?php endwhile;?>
+						                            <!-- Slider Item Start -->
+						                            <div class="swiper-slide">
+						                                <div class="testimonial-slider-item">
+						                                    <div class="testimonial-slider-inside">
+						                                        <div class="testimonial-slider-title">
+						                                            <h3><?php the_title();?></h3>
+						                                            <div class="rating">
+						                                                <?php
+                                                                                $str = '<i class="icon-star-full"></i> ';
+                                                                                $meta = get_post_meta( $post->ID, 'rating', true );
+                                                                                echo str_repeat( $str, $meta );
+                                                                            ?>
+						                                            </div>
+						                                        </div>
+						                                        <div class="row justify-content-md-center">
+						                                            <div class="col col-lg-8">
+						                                                <div class="testimonial-slider-client">
+						                                                    <?php the_post_thumbnail( 'thumbnail' );?>
+						                                                </div>
+						                                                <div class="testimonial-slider-content">
+						                                                    <?php the_content();?>
+						                                                    <h4>
+						                                                        <?php
+                                                                                        $meta = get_post_meta( $post->ID, 'client', true );
+                                                                                        echo $meta;
+                                                                                    ?>
+						                                                    </h4>
+						                                                </div>
+						                                            </div>
+						                                            <div class="col-md-auto">
+						                                                <div class="testimonial-slider-footer">
+						                                                    <div class="location">
+						                                                        <i class="icon-home_pin"></i>
+						                                                        <?php
+                                                                                        $meta = get_post_meta( $post->ID, 'country', true );
+                                                                                        echo $meta;
+                                                                                    ?>
+						                                                    </div>
+						                                                    <div class="project_age">
+						                                                        <?php
+                                                                                        $meta = get_post_meta( $post->ID, 'date_year', true );
+                                                                                        echo $meta;
+                                                                                    ?>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                            <!-- Slider Item End -->
+						                            <?php endwhile;?>
                             <!-- Slider Item Start -->
                         </div>
                         <!-- If we need pagination -->
@@ -90,8 +90,8 @@
                 </div>
             </div>
             <div class="text-center pt-5">
-                <a href="/" type="button" class="btn btn-lg btn-danger">
-                    More Reviews
+                <a href="<?php echo esc_url( get_theme_mod( 'testimonial_cta_url', '#' ) ) ?>" type="button" id="testimonial-cta" class="btn btn-lg btn-danger">
+                    <?php echo get_theme_mod( 'testimonial_cta_text', 'More Reviews' ) ?>
                 </a>
             </div>
         </div>
