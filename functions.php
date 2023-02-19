@@ -16,10 +16,22 @@ define( '_S_VERSION', time() );
 require_once get_theme_file_path( 'inc/functions-global.php' );
 
 /**
- * @functions-global.php is defining global constants
+ * @functions-essential.php
  * @package asadPro
  */
 require_once ASADPRO_INC . 'functions-essential.php';
+
+/**
+ * @template-tags.php is
+ * @package asadPro
+ */
+require_once ASADPRO_INC . 'template-widgets.php';
+
+/**
+ * @template-tags.php is
+ * @package asadPro
+ */
+require_once ASADPRO_INC . 'template-tags.php';
 
 /**
  * @File name and descriptions

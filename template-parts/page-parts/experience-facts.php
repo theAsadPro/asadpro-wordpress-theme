@@ -31,7 +31,7 @@ $default = <<<EOD
 <?php endif;?>
             </div>
             <div class="row">
-                <div class="col-lg-4 p-md-5">
+                <div id="fact-item-1" class="col-lg-4 p-md-5">
                     <div class="some-facts d-flex" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="50"
                         data-aos-easing="ease-in-out" data-aos-once="true">
                         <div class="flex-shrink-0 align-self-center">
@@ -48,7 +48,7 @@ $default = <<<EOD
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 p-md-5">
+                <div id="fact-item-2" class="col-lg-4 p-md-5">
                     <div class="some-facts d-flex" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"
                         data-aos-easing="ease-in-out" data-aos-once="true">
                         <div class="flex-shrink-0 align-self-center">
@@ -66,7 +66,7 @@ $default = <<<EOD
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 p-md-5">
+                <div id="fact-item-3" class="col-lg-4 p-md-5">
                     <div class="some-facts d-flex" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="50"
                         data-aos-easing="ease-in-out" data-aos-once="true">
                         <div class="flex-shrink-0 align-self-center">

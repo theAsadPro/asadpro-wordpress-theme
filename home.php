@@ -17,7 +17,11 @@
         get_template_part( 'template-parts/page-parts/what-we-do' );
     }
 
-    get_template_part( 'template-parts/page-parts/services' );
+    //display this section on or off
+    if ( get_theme_mod( 'serice_cat_display_section' ) == true ) {
+        get_template_part( 'template-parts/page-parts/services' );
+    }
+
     get_template_part( 'template-parts/page-parts/about' );
 
     //display this section on or off
@@ -25,7 +29,11 @@
         get_template_part( 'template-parts/page-parts/experience-facts' );
     }
 
-    get_template_part( 'template-parts/page-parts/testimonial' );
+    //display this section on or off
+    if ( get_theme_mod( 'testimonial_display_section' ) == true ) {
+        get_template_part( 'template-parts/page-parts/testimonial' );
+    }
+
     get_template_part( 'template-parts/page-parts/technology' );
     get_template_part( 'template-parts/page-parts/portfolio' );
     get_template_part( 'template-parts/page-parts/faqs' );
